@@ -86,4 +86,12 @@ hr.chapter-divider {
 .poems-page .text-content,
 .visions-page .text-content {
   text-align: center;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.poem-body {
+  display: inline-block;
+  text-align: left;
+  white-space: pre-wrap;
 }

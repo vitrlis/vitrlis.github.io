@@ -75,17 +75,21 @@ export default function App() {
               <div className="space-y-12">
                 <div>
                   <h5 className="text-lg text-center mb-4">The First Verse</h5>
-                  <div className="whitespace-pre-wrap text-center mx-[8%]">
-                    Softly falls the sepia rain{"\n"}
-                    Upon the brown and dusty plain.
+                  <div className="text-center">
+                    <div className="inline-block text-left whitespace-pre-wrap">
+                      Softly falls the sepia rain{"\n"}
+                      Upon the brown and dusty plain.
+                    </div>
                   </div>
                   <hr className="border-t border-[#d2b48c] mx-[30%] mt-8" />
                 </div>
                 <div>
                   <h5 className="text-lg text-center mb-4">The Second Verse</h5>
-                  <div className="whitespace-pre-wrap text-center mx-[8%]">
-                    A minimal line{"\n"}
-                    A simple rhyme.
+                  <div className="text-center">
+                    <div className="inline-block text-left whitespace-pre-wrap">
+                      A minimal line{"\n"}
+                      A simple rhyme.
+                    </div>
                   </div>
                   <hr className="border-t border-[#d2b48c] mx-[30%] mt-8" />
                 </div>
@@ -93,8 +97,14 @@ export default function App() {
             )}
 
             {currentPage === 'visions.html' && (
-              <div className="text-center mt-12">
-                They're on <a href="https://www.instagram.com/username" className="underline">instagram</a>, if you wanna go there
+              <div className="space-y-12">
+                <div>
+                  <h5 className="text-lg text-center mb-4"></h5>
+                  <div className="text-center mt-12">
+                    They're on <a href={`https://www.instagram.com/${"username"}`} className="underline">instagram</a>, if you wanna go there
+                  </div>
+                  <hr className="border-t border-[#d2b48c] mx-[30%] mt-8" />
+                </div>
               </div>
             )}
           </div>
