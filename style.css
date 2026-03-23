@@ -82,3 +82,8 @@ hr.chapter-divider {
   text-align: left;
   margin: 0 8% 2rem 8%;
 }
+
+.poems-page .text-content,
+.visions-page .text-content {
+  text-align: center;
+}

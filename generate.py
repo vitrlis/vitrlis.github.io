@@ -10,6 +10,8 @@ def generate_html(source_file, output_file, main_title):
 
     chapters = content.split('\n-\n')
     
+    body_class = "poems-page" if "poems" in output_file.lower() else ""
+    
     html_content = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +20,7 @@ def generate_html(source_file, output_file, main_title):
     <title>{main_title} - vitrlis</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="sub-page">
+<body class="sub-page {body_class}">
     <div class="site-header">
         <a href="index.html"><h3>vitrlis</h3></a>
     </div>

@@ -31,21 +31,21 @@ export default function App() {
             <div className="flex flex-col gap-4 items-center">
               <a href="#" onClick={(e) => navigate(e, 'book.html')} className="text-3xl hover:underline"><h2>book</h2></a>
               <a href="#" onClick={(e) => navigate(e, 'poems.html')} className="text-3xl hover:underline"><h2>poems</h2></a>
-              <a href="#" onClick={(e) => navigate(e, 'blogs.html')} className="text-3xl hover:underline"><h2>blogs</h2></a>
+              <a href="#" onClick={(e) => navigate(e, 'visions.html')} className="text-3xl hover:underline"><h2>visions</h2></a>
             </div>
           </div>
         </div>
       )}
 
       {currentPage !== 'index.html' && (
-        <div className="relative pt-12">
+        <div className={`relative pt-12 ${currentPage === 'poems.html' ? 'poems-page' : ''}`}>
           <div className="absolute top-0 left-0">
             <a href="#" onClick={(e) => navigate(e, 'index.html')} className="text-xl"><h3>vitrlis</h3></a>
           </div>
           
           <div className="max-w-2xl mx-auto">
             <h2 className="text-2xl text-center mb-2">
-              {currentPage === 'book.html' ? 'Hard Sacks' : currentPage === 'poems.html' ? 'poems' : 'blogs'}
+              {currentPage === 'book.html' ? 'Hard Sacks' : currentPage === 'poems.html' ? 'poems' : 'visions'}
             </h2>
             <hr className="border-t border-[#d2b48c] mx-[5%] mb-8" />
             
@@ -75,7 +75,7 @@ export default function App() {
               <div className="space-y-12">
                 <div>
                   <h5 className="text-lg text-center mb-4">The First Verse</h5>
-                  <div className="whitespace-pre-wrap text-left mx-[8%]">
+                  <div className="whitespace-pre-wrap text-center mx-[8%]">
                     Softly falls the sepia rain{"\n"}
                     Upon the brown and dusty plain.
                   </div>
@@ -83,7 +83,7 @@ export default function App() {
                 </div>
                 <div>
                   <h5 className="text-lg text-center mb-4">The Second Verse</h5>
-                  <div className="whitespace-pre-wrap text-left mx-[8%]">
+                  <div className="whitespace-pre-wrap text-center mx-[8%]">
                     A minimal line{"\n"}
                     A simple rhyme.
                   </div>
@@ -92,8 +92,10 @@ export default function App() {
               </div>
             )}
 
-            {currentPage === 'blogs.html' && (
-              <p className="text-center italic">Coming soon...</p>
+            {currentPage === 'visions.html' && (
+              <div className="text-center mt-12">
+                They're on <a href="https://www.instagram.com/username" className="underline">instagram</a>, if you wanna go there
+              </div>
             )}
           </div>
         </div>
